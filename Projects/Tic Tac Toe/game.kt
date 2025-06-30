@@ -26,22 +26,7 @@ class Score(val score: Int = 0)
 // ? Class - Player
 class Player(val name: String = "Guest", val symbol: Char, val _score: Int = 0)
 {
-    // // * Attributes
-    // private val this.symbol: Char = symbol
-    // private val this.name: String = name
-
     val score: Score = Score(_score)
-
-    // // * Getters
-    // fun getName(): String
-    // {
-    //     return this.name
-    // }
-
-    // fun getSymbol(): Char
-    // {
-    //     return this.symbol
-    // }
 }
 
 fun main()
