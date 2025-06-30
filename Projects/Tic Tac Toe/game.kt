@@ -2,46 +2,46 @@
 class Score(val score: Int = 0)
 {
     // * Attribute
-    private var score: Int = score
+    private var _value: Int = score
 
     // * Getter
     fun get(): Int
     {
-        return score
+        return _value
     }
 
     // * Method - Increase Score
     fun increase()
     {
-        score++
+        _value++
     }
 
     // * Method - Reset score
     fun reset()
     {
-        score = 0
+        _value = 0
     }
 }
 
 // ? Class - Player
-class Player(val name: String = "Guest", val symbol: Char, val score: Int = 0)
+class Player(val name: String = "Guest", val symbol: Char, val _score: Int = 0)
 {
-    // * Attributes
-    private val this.symbol: Char = symbol
-    private val this.name: String = name
+    // // * Attributes
+    // private val this.symbol: Char = symbol
+    // private val this.name: String = name
 
-    val this.score: Score = Score(score)
+    val score: Score = Score(_score)
 
-    // * Getters
-    fun getName(): String
-    {
-        return this.name
-    }
+    // // * Getters
+    // fun getName(): String
+    // {
+    //     return this.name
+    // }
 
-    fun getSymbol(): Char
-    {
-        return this.symbol
-    }
+    // fun getSymbol(): Char
+    // {
+    //     return this.symbol
+    // }
 }
 
 fun main()
@@ -51,9 +51,9 @@ fun main()
     obj.score.increase()
     obj.score.increase()
 
-    val name: String = obj.getName()
-    val symbol: Char = obj.getSymbol()
+    val name: String = obj.name
+    val symbol: Char = obj.symbol
     val score: Int = obj.score.get()
 
-    println("$name has symbol '$symbol' and made $score score")
+    println("$name has symbol '$symbol' and made '$score' score")
 }
